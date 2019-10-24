@@ -21,6 +21,14 @@ print(int_List)
 print(float_List)
 print(str_List)
 
+
+#random order of a list
+from random import shuffle
+myshuffle = [1,2,3,4,5,6,7]
+shuffle(myshuffle)
+print(myshuffle)
+
+
 #Dictionary
 my_dict = {'key1':'value1','key2':'value2','key3':'value3','key4':'value4'}
 print(my_dict['key2'])
