@@ -25,6 +25,25 @@ for letter in string_loop:
 for letter in 'string_loop with out var':
     print(letter)
 
+mystring = "hello"
+str_List2 = [letter for letter in mystring]
+print(str_List2)
+
+myList1 = [num for num in range(0,11)] # create a List from 0 to 10
+print(myList1)
+
+myList2 = [num**2 for num in range(0,11)] #find the square values
+print(myList2)
+
+myList3 = [num for num in range(0,11) if num%2==0] # create a list of even numbers with an IF statement
+print(myList3)
+
+#do more complex stuff in the loop
+#celcius to fahrenheit
+celciusTemps = [0,10,20,34.5]
+fahrenheit = [((9/5)*temp + 32) for temp in celciusTemps]
+print(fahrenheit)
+
 
 #while loops
 x = 0

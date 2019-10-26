@@ -13,3 +13,6 @@ print(s[::-1]) #revise order
 
 
 print(f'{s}')
+
+#how many charactors are in the word?
+print(len(s))
