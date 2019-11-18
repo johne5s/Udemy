@@ -18,4 +18,4 @@ class Card():
         elif self.rank.upper() == "A":
             return 1
         else:
-            return self.rank
+            return int(self.rank)
