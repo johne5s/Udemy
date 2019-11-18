@@ -67,6 +67,3 @@ class Drawboard():
             i += 1
         line0 += f' {player.name} Cards and betting {player.betAmount} coins'
         print(f'{line0}\n{line1}\n{line2}\n{line3}')
-
-def DrawWinner():
-    Print("You are the winner")
