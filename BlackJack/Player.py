@@ -2,10 +2,12 @@ class Player():
     def __init__(self,name,coins):
         self.name = name
         self.coins = coins
+        self.betAmount = 0
         self.cards = []
 
     def Hit(self,deck):
-        self.cards.append(deck.pop())
+        if len(deck) > 0:
+            self.cards.append(deck.pop())
         #needs check to total value of the all the cards inthe players hand 
 
     def Stay(self):
