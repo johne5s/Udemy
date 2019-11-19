@@ -12,7 +12,7 @@ from random import randint
 clear = lambda: os.system('cls') #on Windows System
 clear()
 
-hideDealerCards = True
+
 
 ### Functions
 
@@ -29,7 +29,17 @@ def Deck():
     shuffle(deck)
     return deck
 
+deck = Deck()
+dealer = Dealer.Dealer()
 
+def NewGame(deck):
+    dealer.cards = []
+    if len(deck) < 20:
+        #self.deck.clear()
+        #newDeck = []
+        deck = Deck()
+    player.cards = []
+    newDeal(deck)
 
 ## End Functions
 
@@ -55,68 +65,104 @@ while True:
         player = Player.Player(name=pname,coins=50)
         break
 
-print(f'{player.name} Has {player.coins} coins')
+print(f'{player.name} has {player.coins} coins')
 
-deck = Deck()
-dealer = Dealer.Dealer()
-#print(deck[0].rank + deck[0].suite)
+# Create a new deck and new dealer
 
-# Player needs to bet
-while True:
-    try:
-        #Ask the user to Hit or Stay
-        result = int(input("How much to bet?"))
-    except:
-        print("Not an int")
-        continue
-    else:
-        # No error so do the else
-        player.betAmount = result
-        break
 
-# Hit or Stay
-player.Hit(deck)
-dealer.Hit(deck)
-player.Hit(deck)
-dealer.Hit(deck)
 
-clear()
-drawboard = DrawBoard.Drawboard()
-drawboard.DrawBoard(dealer,player,hideDealerCards)
+def newDeal(deck):
+    hideDealerCards = True
+    # Player needs to bet
 
-while True:
-    try:
-        #Ask the user to Hit or Stay
-        result = int(input("Press 1 to Hit \nPress 2 to Stay : \n"))
-    except:
-        print("Not an int")
-        continue
-    else:
-        # No error so do the else
-        if result == 1:
-            player.Hit(deck)
-            clear()
-            drawboard.DrawBoard(dealer,player,hideDealerCards)
+    while True:
+        try:
+            #Ask the user to Hit or Stay
+            result = int(input("How much to bet?"))
+        except:
+            print("Not an int")
+            continue
         else:
-            #show the dealers
-            hideDealerCards = False
-            clear()
-            drawboard.DrawBoard(dealer,player,hideDealerCards)
-
-            #Check for Winner
-            check = WinnerCheck.WinnerCheck().PlayerWinnerCheck(dealer,player)
-
-            clear()
-            drawboard.DrawBoard(dealer,player,hideDealerCards)
-            if check == True:
-                player.coins += player.betAmount*2
+            # No error so do the else
+            if result < 1:
+                continue
+            if result <= player.coins:
+                player.betAmount = result
+                break
             else:
-                player.betAmount -= player.betAmount
+                continue
 
-            print(f'{player.name} now has {player.coins} coins')
-            #Ask to keep playing
+    # Hit or Stay
+    player.Hit(deck)
+    dealer.Hit(deck)
+    player.Hit(deck)
+    dealer.Hit(deck)
 
-            break
+    clear()
+    drawboard = DrawBoard.Drawboard()
+    drawboard.DrawBoard(dealer,player,hideDealerCards)
+
+    while True:
+        try:
+            #Ask the user to Hit or Stay
+            result = int(input("Press 1 to Hit \nPress 2 to Stay : \n"))
+        except:
+            print("Not an int")
+            continue
+        else:
+            # No error so do the else
+            if result == 1:
+                player.Hit(deck)
+                clear()
+                drawboard.DrawBoard(dealer,player,hideDealerCards)
+            else:
+                #show the dealers
+                hideDealerCards = False
+                clear()
+                drawboard.DrawBoard(dealer,player,hideDealerCards)
+
+                #Check for Winner
+                check = 5
+                while check > 1:
+                    check = WinnerCheck.WinnerCheck().PlayerWinnerCheck(dealer,player)
+                    if check == 2:
+                        dealer.Hit(deck)
+                    elif check == 3:
+                        break
+
+                clear()
+                drawboard.DrawBoard(dealer,player,hideDealerCards)
+                if check == 0:
+                    player.coins += player.betAmount
+                    print(f'\n{player.name} Wins : {dealer.points()}, {player.points()}')
+                elif check == 3:
+                    #puch, no change in money
+                    print(f'\nPush : {dealer.points()}, {player.points()}')
+                    pass
+                else:
+                    player.coins -= player.betAmount
+                    print(f'\nDealer Wins : {dealer.points()}, {player.points()}')
+
+                print(f'{player.name} now has {player.coins} coins')
+                break
+    
+    if player.coins <= 0:
+        return None
+
+    while True:
+        try:
+            #Ask the user to Hit or Stay
+            result = int(input("1 = New Deal\n2 = Quit\n"))
+        except:
+            print("Not an int")
+            continue
+        else:
+            if result == 1:
+                NewGame(deck)
+                # I don't like this
+                break
+            else:
+                break
 
 
-
+NewGame(deck)

@@ -65,5 +65,5 @@ class Drawboard():
             if i > 1:
                 line0 += "----"
             i += 1
-        line0 += f' {player.name} Cards and betting {player.betAmount} coins'
+        line0 += f' {player.name}\'s cards and is betting {player.betAmount} coins'
         print(f'{line0}\n{line1}\n{line2}\n{line3}')
