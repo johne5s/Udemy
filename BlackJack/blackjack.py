@@ -109,6 +109,11 @@ def newDeal(deck):
                 player.Hit(deck)
                 clear()
                 drawboard.DrawBoard(dealer,player,hideDealerCards)
+                if player.points() > 21:
+                    player.coins -= player.betAmount
+                    print(f'\nDealer Wins : {dealer.points()}, {player.points()}')
+                    print(f'{player.name} now has {player.coins} coins')
+                    break
             else:
                 #show the dealers
                 hideDealerCards = False

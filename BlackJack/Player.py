@@ -31,8 +31,3 @@ class Player():
                 points += 1
             i +=1
         return points
-
-        #if points + 11 < 22:
-        #    points += 11
-        #else:
-        #    points += 1
