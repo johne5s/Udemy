@@ -16,12 +16,23 @@ class Player():
 
     def points(self):
         points = 0
+        aces = 0
         for card in self.cards:
             if card.rank == 'A':
-                if points + 11 < 22:
-                    points += 11
-                else:
-                    points += 1
+                aces += 1
             else:
                 points += card.value()
+        
+        i=0
+        while i < aces:
+            if points + 11 < 22:
+                points += 11
+            else:
+                points += 1
+            i +=1
         return points
+
+        #if points + 11 < 22:
+        #    points += 11
+        #else:
+        #    points += 1

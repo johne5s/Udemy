@@ -13,10 +13,8 @@ clear = lambda: os.system('cls') #on Windows System
 clear()
 
 
-
-### Functions
-
 def Deck():
+    #creates a deck of 52 cards and returns it
     cardRank = ["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
     cardSuite = ["C","D","H","S"]
     deck = []
@@ -29,26 +27,24 @@ def Deck():
     shuffle(deck)
     return deck
 
+#create the first deck
 deck = Deck()
+#create the dealer
 dealer = Dealer.Dealer()
 
 def NewGame(deck):
+    #start a new round/new hand
     dealer.cards = []
-    if len(deck) < 20:
-        #self.deck.clear()
-        #newDeck = []
-        deck = Deck()
     player.cards = []
+    if len(deck) < 20:
+        #if the deck is running low on cards,  lets reshuffle the deck
+        deck = Deck()
     newDeal(deck)
-
-## End Functions
-
-#card = Card(rank='J',suite='D')
-#print(f'{card.rank}{card.suite} : {card.value()}')
+    #Deal a new hand
 
 while True:
     try:
-        #code to be attempted
+        #Ask for the Players name
         pname = str(input("Please provide your name: "))
         pname = pname.strip()
         if len(pname)==0 :
@@ -67,17 +63,13 @@ while True:
 
 print(f'{player.name} has {player.coins} coins')
 
-# Create a new deck and new dealer
-
-
-
 def newDeal(deck):
     hideDealerCards = True
-    # Player needs to bet
 
+    # Player needs to set a bet amount
     while True:
         try:
-            #Ask the user to Hit or Stay
+            #Ask the player for a bet amount
             result = int(input("How much to bet?"))
         except:
             print("Not an int")
@@ -92,12 +84,13 @@ def newDeal(deck):
             else:
                 continue
 
-    # Hit or Stay
+    # Give cards to player and Dealer
     player.Hit(deck)
     dealer.Hit(deck)
     player.Hit(deck)
     dealer.Hit(deck)
 
+    #Display the cards
     clear()
     drawboard = DrawBoard.Drawboard()
     drawboard.DrawBoard(dealer,player,hideDealerCards)
@@ -112,24 +105,25 @@ def newDeal(deck):
         else:
             # No error so do the else
             if result == 1:
+                #player wants a card, lets give them one and refresh the board
                 player.Hit(deck)
                 clear()
                 drawboard.DrawBoard(dealer,player,hideDealerCards)
             else:
                 #show the dealers
                 hideDealerCards = False
-                clear()
-                drawboard.DrawBoard(dealer,player,hideDealerCards)
 
                 #Check for Winner
-                check = 5
+                check = 5 # 5 is just a number higher then what will be returned later
                 while check > 1:
                     check = WinnerCheck.WinnerCheck().PlayerWinnerCheck(dealer,player)
                     if check == 2:
+                        #dealer needs a card, lets give him one
                         dealer.Hit(deck)
                     elif check == 3:
+                        #dealer wants to PUSH
                         break
-
+                
                 clear()
                 drawboard.DrawBoard(dealer,player,hideDealerCards)
                 if check == 0:
