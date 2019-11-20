@@ -1,17 +1,24 @@
 import os
-import sys
-import time
-import math
 import Card
 import Player
 import Dealer
 import DrawBoard
 import WinnerCheck
 from random import randint
+import playsound
+
 
 clear = lambda: os.system('cls') #on Windows System
 clear()
 
+def PlaySound(clip):
+    if clip == 'loss':
+        playsound.playsound('sounds/loss.wav', False)
+    elif clip == 'push':
+        playsound.playsound('sounds/push.wav', False)
+    else:
+        playsound.playsound('sounds/win.wav', False)
+    
 
 def Deck():
     #creates a deck of 52 cards and returns it
@@ -76,9 +83,9 @@ def newDeal(deck):
             continue
         else:
             # No error so do the else
-            if result < 1:
-                continue
-            if result <= player.coins:
+            if result > 0 and result <= player.coins:
+                #don't allow 0 and less then 0 to be allowed
+                #and must be lessthen or = to the amount in the bank
                 player.betAmount = result
                 break
             else:
@@ -113,6 +120,7 @@ def newDeal(deck):
                     player.coins -= player.betAmount
                     print(f'\nDealer Wins : {dealer.points()}, {player.points()}')
                     print(f'{player.name} now has {player.coins} coins')
+                    PlaySound('loss')
                     break
             else:
                 #show the dealers
@@ -134,14 +142,17 @@ def newDeal(deck):
                 if check == 0:
                     player.coins += player.betAmount
                     print(f'\n{player.name} Wins : {dealer.points()}, {player.points()}')
+                    PlaySound('win')
+                    
                 elif check == 3:
                     #puch, no change in money
                     print(f'\nPush : {dealer.points()}, {player.points()}')
+                    PlaySound('push')
                     pass
                 else:
                     player.coins -= player.betAmount
                     print(f'\nDealer Wins : {dealer.points()}, {player.points()}')
-
+                    PlaySound('loss')
                 print(f'{player.name} now has {player.coins} coins')
                 break
     
