@@ -3,41 +3,44 @@ class WinnerCheck():
     #dealer win = 1
     #dealer needs to hit = 2
     #push = 3
-    returnThis = 0
+    
 
     def PlayerWinnerCheck(self,dealer,player):
+        dealerPoints = dealer.points()
+        playerPoints = player.points()
+        returnThis = 0
         #check for bust
-        if player.points() == 21 and dealer.points() == 21:
+        if playerPoints == 21 and dealerPoints == 21:
             #push
             self.returnThis = 3
-        elif player.points() == 21:
+        elif playerPoints == 21:
             #Player Wins
             self.returnThis = 0
-        elif player.points() > 21:
+        elif playerPoints > 21:
             #Dealer Wins
             self.returnThis = 1
-        elif dealer.points() == player.points():
+        elif dealerPoints == playerPoints:
             #Push ?
-            if dealer.points() < 16:
+            if dealerPoints < 16:
                 #Dealer Hit
                 self.returnThis = 2
             else:
                 #Push
                 self.returnThis = 3
-        elif dealer.points() == 21:
+        elif dealerPoints == 21:
             #Dealer Wins
             self.returnThis = 1
-        elif dealer.points() > 21:
+        elif dealerPoints > 21:
             #Player Wins
             self.returnThis = 0
-        elif dealer.points() <= player.points():
+        elif dealerPoints <= playerPoints:
             #Dealer Hit
             self.returnThis = 2
-        elif dealer.points() > player.points():
+        elif dealerPoints > playerPoints:
             #Dealer Wins
             self.returnThis = 1
         else:
-            print(f'Error Here are the points : {dealer.points()}, {player.points()}')
+            print(f'Error Here are the points : {dealerPoints}, {playerPoints}')
         
         return self.returnThis
 

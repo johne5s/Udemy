@@ -4,92 +4,75 @@ import Player
 import Dealer
 import DrawBoard
 import WinnerCheck
+import MyFunctions
 from random import randint
-import playsound
 
 
 clear = lambda: os.system('cls') #on Windows System
 clear()
 
-def PlaySound(clip):
-    if clip == 'loss':
-        playsound.playsound('sounds/loss.wav', False)
-    elif clip == 'push':
-        playsound.playsound('sounds/push.wav', False)
-    else:
-        playsound.playsound('sounds/win.wav', False)
-    
-
-def Deck():
-    #creates a deck of 52 cards and returns it
-    cardRank = ["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
-    cardSuite = ["C","D","H","S"]
-    deck = []
-    for suite in cardSuite:
-        for rank in cardRank:
-            Card.Card(rank=rank,suite=suite)
-            deck.append(Card.Card(rank=rank,suite=suite))
-    
-    from random import shuffle
-    shuffle(deck)
-    return deck
+MyFunctions.WelcomeMsg()
 
 #create the first deck
-deck = Deck()
+deck = MyFunctions.Deck()
 #create the dealer
 dealer = Dealer.Dealer()
 
-def NewGame(deck):
-    #start a new round/new hand
-    dealer.cards = []
-    player.cards = []
-    if len(deck) < 20:
-        #if the deck is running low on cards,  lets reshuffle the deck
-        deck = Deck()
-    newDeal(deck)
-    #Deal a new hand
 
-while True:
-    try:
-        #Ask for the Players name
-        pname = str(input("Please provide your name: "))
-        pname = pname.strip()
-        if len(pname)==0 :
-            continue
-    except TypeError:
-        print("A TypeError was found")
-        continue 
-    except:
-        print("Generic Error")
-        continue
-    else:
-        # No error so do the else
-        # lets create the player
-        player = Player.Player(name=pname,coins=50)
-        break
+#print(f'{player.name} has {player.coins} coins')
 
-print(f'{player.name} has {player.coins} coins')
 
-def newDeal(deck):
-    hideDealerCards = True
+def main(deck):
 
-    # Player needs to set a bet amount
+    #Create the player
     while True:
         try:
-            #Ask the player for a bet amount
-            result = int(input("How much to bet?"))
+            #Ask for the Players name
+            pname = str(input("Please provide your name: "))
+            pname = pname.strip()
+            if len(pname)==0 :
+                continue
+        except TypeError:
+            print("A TypeError was found")
+            continue 
         except:
-            print("Not an int")
+            print("Generic Error")
             continue
         else:
             # No error so do the else
+            player = Player.Player(name=pname,coins=50)
+            break
+
+
+    while True:
+        result = MyFunctions.newDeal(player)
+        if result == 2:
+            return False
+        else:
+            if len(deck) < 20:
+                #if the deck is running low on cards,  lets reshuffle the deck
+                deck = MyFunctions.Deck()
+            MyFunctions.NewGame(dealer,player)
+            if player.coins <= 0:
+                #player is out of money :(
+                print(f"{player.name} has no more coins. GAME OVER")
+                return False
+            else:
+                Main_Game(dealer,player,deck)
+    
+## Main Game Loop ##
+def Main_Game(dealer,player,deck):
+    #Ask the player for a bet
+    while True:
+        try:
+            result = MyFunctions.GetBetAmount()
+        except:
+            print("Generic Error")
+            continue
+        else:
             if result > 0 and result <= player.coins:
-                #don't allow 0 and less then 0 to be allowed
-                #and must be lessthen or = to the amount in the bank
                 player.betAmount = result
                 break
-            else:
-                continue
 
     # Give cards to player and Dealer
     player.Hit(deck)
@@ -100,79 +83,59 @@ def newDeal(deck):
     #Display the cards
     clear()
     drawboard = DrawBoard.Drawboard()
-    drawboard.DrawBoard(dealer,player,hideDealerCards)
+    drawboard.DrawBoard(dealer,player,True)
 
     while True:
-        try:
-            #Ask the user to Hit or Stay
-            result = int(input("Press 1 to Hit \nPress 2 to Stay : \n"))
-        except:
-            print("Not an int")
-            continue
-        else:
-            # No error so do the else
-            if result == 1:
-                #player wants a card, lets give them one and refresh the board
-                player.Hit(deck)
-                clear()
-                drawboard.DrawBoard(dealer,player,hideDealerCards)
-                if player.points() > 21:
-                    player.coins -= player.betAmount
-                    print(f'\nDealer Wins : {dealer.points()}, {player.points()}')
-                    print(f'{player.name} now has {player.coins} coins')
-                    PlaySound('loss')
-                    break
-            else:
-                #show the dealers
-                hideDealerCards = False
-
-                #Check for Winner
-                check = 5 # 5 is just a number higher then what will be returned later
-                while check > 1:
-                    check = WinnerCheck.WinnerCheck().PlayerWinnerCheck(dealer,player)
-                    if check == 2:
-                        #dealer needs a card, lets give him one
-                        dealer.Hit(deck)
-                    elif check == 3:
-                        #dealer wants to PUSH
-                        break
-                
-                clear()
-                drawboard.DrawBoard(dealer,player,hideDealerCards)
+        #Ask to Hit, Stay or Double Down
+        hitOrStay = MyFunctions.HitOrStay()
+        if hitOrStay == 1:
+            #player wants a card, lets give them one and refresh the board
+            player.Hit(deck)
+            clear()
+            drawboard.DrawBoard(dealer,player,True)
+            #check if the player has busted
+            if player.points() > 21:
+                player.coins -= player.betAmount
+                print(f'\nDealer Wins : {dealer.points()}, {player.points()}')
+                print(f'{player.name} now has {player.coins} coins')
+                MyFunctions.PlaySound('loss')
+                break
+        elif hitOrStay == 2:
+            #dealers turn
+            #MyFunctions.DealersTurn(dealer,player)
+            while True:
+                check = WinnerCheck.WinnerCheck().PlayerWinnerCheck(dealer,player)
                 if check == 0:
+                    #Player wins
+                    clear()
+                    drawboard.DrawBoard(dealer,player,False)
                     player.coins += player.betAmount
                     print(f'\n{player.name} Wins : {dealer.points()}, {player.points()}')
-                    PlaySound('win')
-                    
-                elif check == 3:
-                    #puch, no change in money
-                    print(f'\nPush : {dealer.points()}, {player.points()}')
-                    PlaySound('push')
-                    pass
-                else:
+                    MyFunctions.PlaySound('win')
+                    return False
+                elif check == 1:
+                    clear()
+                    drawboard.DrawBoard(dealer,player,False)
                     player.coins -= player.betAmount
                     print(f'\nDealer Wins : {dealer.points()}, {player.points()}')
-                    PlaySound('loss')
-                print(f'{player.name} now has {player.coins} coins')
-                break
-    
-    if player.coins <= 0:
-        return None
-
-    while True:
-        try:
-            #Ask the user to Hit or Stay
-            result = int(input("1 = New Deal\n2 = Quit\n"))
-        except:
-            print("Not an int")
-            continue
+                    MyFunctions.PlaySound('loss')
+                    #Dealer wins
+                    return False
+                elif check == 2:
+                    #dealer needs a card, lets give him one
+                    dealer.Hit(deck)
+                    continue
+                elif check == 3:
+                    #dealer wants to PUSH
+                    print(f'\nPush : {dealer.points()}, {player.points()}')
+                    MyFunctions.PlaySound('push')
+                    return False
+        elif hitOrStay == 3:
+            #Double Down
+            pass
         else:
-            if result == 1:
-                NewGame(deck)
-                # I don't like this
-                break
-            else:
-                break
+            break
+    print("complete Play again?")
 
-
-NewGame(deck)
+if __name__ == "__main__":
+    main(deck)

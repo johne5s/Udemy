@@ -28,17 +28,6 @@ class Drawboard():
                 line3 += f'\033[4m|{dealer.cards[i].suite}|\033[0m '
             i+=1
 
-
-        #for card in dealer.cards:
-            #if card.rank == '10':
-                #line1 += f'____ '
-                #line2 += f'|{card.rank}| '
-                #line3 += f'\033[4m|{card.suite} |\033[0m '
-            #else:
-                #line1 += f'___ '
-                #line2 += f'|{card.rank}| '
-                #line3 += f'\033[4m|{card.suite}|\033[0m '
-
         i=0
         lineLen = len(line1)+5
         while i < lineLen:
@@ -65,5 +54,5 @@ class Drawboard():
             if i > 1:
                 line0 += "----"
             i += 1
-        line0 += f' {player.name}\'s cards and is betting {player.betAmount} coins'
+        line0 += f' {player.name}\'s cards : Bank = {player.coins} coins and is betting {player.betAmount} coins'
         print(f'{line0}\n{line1}\n{line2}\n{line3}')
