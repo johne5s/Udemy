@@ -132,6 +132,7 @@ def Main_Game(dealer,player,deck):
                     return False
         elif hitOrStay == 3:
             #Double Down
+            #didn't finish this
             pass
         else:
             break

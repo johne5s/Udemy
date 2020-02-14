@@ -1,0 +1,548 @@
+31020 Adams Twp.
+46020 Addison 
+46010 Adrian 
+58020 Airport 
+79010 Akron-Fairgrove 
+24030 Alanson 
+05010 Alba 
+13010 Albion 
+01010 Alcona 
+74030 Algonac 
+03030 Allegan 
+82020 Allen Park 
+70040 Allendale 
+29010 Alma 
+44020 Almont 
+04010 Alpena 
+50040 Anchor Bay 
+81010 Ann Arbor 
+06010 Arenac Eastern 
+50050 Armada 
+07010 Arvon Twp. 
+29020 Ashley 
+13050 Athens 
+25130 Atherton 
+60010 Atlanta 
+06020 Au Gres-Sims 
+02010 Au Train-Onota 
+63070 Avondale 
+32010 Bad Axe 
+43040 Baldwin 
+80020 Bangor (Van Buren) 
+80240 Bangor Twp. 
+09030 Bangor Twp. (Bay) 
+07020 Baraga 
+21090 Bark River-Harris 
+19100 Bath 
+13020 Battle Creek 
+09010 Bay City 
+37040 Beal City 
+51020 Bear Lake 
+15010 Beaver Island 
+26010 Beaverton 
+58030 Bedford 
+25240 Beecher 
+34080 Belding 
+05040 Bellaire 
+23010 Bellevue 
+25060 Bendle 
+25230 Bentley 
+11010 Benton Harbor 
+10015 Benzie County Central 
+63050 Berkley 
+34140 Berlin Twp. 
+11240 Berrien Springs 
+27010 Bessemer 
+21065 Big Bay De Noc 
+62470 Big Jackson 
+54010 Big Rapids 
+73170 Birch Run 
+63010 Birmingham 
+46040 Blissfield 
+63080 Bloomfield Hills 
+80090 Bloomingdale 
+49020 Bois Blanc Pines 
+15020 Boyne City 
+15030 Boyne Falls 
+63180 Brandon 
+11210 Brandywine 
+29040 Breckenridge 
+22030 Breitung Twp. 
+73180 Bridgeport-Spaulding 
+11340 Bridgman 
+47010 Brighton 
+17140 Brimley 
+46050 Britton Deerfield 
+12020 Bronson 
+76060 Brown City 
+11310 Buchanan 
+28035 Buckley 
+56020 Bullock Creek 
+75020 Burr Oak 
+02020 Burt Twp. 
+78020 Byron 
+41040 Byron Center 
+83010 Cadillac 
+41050 Caledonia 
+31030 Calumet 
+30010 Camden-Frontier 
+74040 Capac 
+25080 Cannan-Ainsworth 
+55010 Camey-Nadeau 
+79020 Caro 
+73030 Carrollton 
+59020 Carson City-Crystal 
+76070 Carsonville-Pt. Sanilac 
+32030 Caseville 
+79030 Cass City 
+14010 Cassopolis 
+41070 Cedar Springs 
+50010 Center Line 
+05035 Central Lake 
+59125 Central Montcalm 
+75030 Centreville 
+15050 Charlevoix 
+23030 Charlotte 
+31050 Chassell Twp. 
+16015 Cheboygan 
+81040 Chelsea 
+73110 Chesaning Union 
+54025 Chippewa Hills 
+50080 Chippewa Valley 
+32040 Church 
+18010 Clare 
+63090 Clarenceville 
+63190 Clarkston 
+63270 Clawson 
+39020 Climax-Scotts 
+46060 Clinton 
+50070 Clintondale 
+25150 Clio 
+12010 Coldwater 
+56030 Coleman 
+32260 Colfax Twp. 
+11330 Coloma 
+75040 Colon 
+38040 Columbia 
+39030 Comstock 
+41080 Comstock Park 
+38080 Concord 
+75050 Constantine 
+70120 Coopersville 
+78100 Corunna 
+80040 Covert 
+20015 Crawford AuSable 
+82230 Crestwood 
+76080 Croswell-Lexington 
+33040 Dansville 
+25140 Davison 
+82030 Dearborn 
+82040 Dearborn Heights 
+80050 Decatur 
+76090 Deckerville 
+46070 Deerfield 
+08010 Delton-Kellogg 
+17050 DeTour 
+82010 Detroit 
+19010 DeWitt 
+81050 Dexter 
+31100 Dollar Bay-Tamarack City 
+14020 Dowagiac Union 
+44050 Dryden 
+58050 Dundee 
+78030 Durand 
+74050 East China 
+50020 East Detroit 
+41090 East Grand Rapids 
+38090 East Jackson 
+15060 East Jordan 
+33010 East Lansing 
+34340 Easton Twp. 
+23050 Eaton Rapids 
+11250 Eau Claire 
+82250 Ecorse 
+14030 Edwardsburg 
+05060 Elk Rapids 
+32050 Elkton-Pigeon-Bay Port Laker 
+05065 Ellsworth 
+31070 Elm River Twp. 
+49055 Engadine 
+21010 Escanaba 
+09050 Essexville-Hampton 
+67020 Evart 
+66045 Ewen-Trout Creek 
+40060 Excelsior 
+68030 Fairview 
+63200 Farmington 
+18020 Farwell 
+03050 Fennville 
+25100 Fenton 
+63020 Ferndale 
+50090 Fitzgerald 
+82180 Flat Rock 
+25010 Flint 
+25120 Flushing 
+40020 Forest Area 
+4lll0 Forest Hills 
+36015 Forest Park 
+19070 Fowler 
+47030 Fowlerville 
+73190 Frankenmuth 
+10025 Frankfort-Elberta 
+50100 Fraser 
+73200 Freeland 
+53030 Free Soil 
+62040 Fremont 
+61080 Fruitport 
+29050 Fulton 
+39050 Galesburg-Augusta 
+11160 Galien Twp. 
+82050 Garden City 
+69020 Gaylord 
+25070 Genesee 
+82290 Gibraltar 
+21025 Gladstone 
+26040 Gladwin 
+45010 Glen Lake 
+03440 Glenn 
+80110 Gobles 
+41120 Godfrey-Lee 
+41020 Godwin Heights 
+25050 Goodrich 
+25030 Grand Blanc 
+70010 Grand Haven 
+23060 Grand Ledge 
+41010 Grand Rapids 
+41130 Grandville 
+62050 Grant 
+42030 Grant Twp. 
+38050 Grass Lake 
+59070 Greenville 
+82300 Grosse Ile Twp. 
+82055 Grosse Pointe 
+39065 Gull Lake 
+52040 Gwinn 
+11670 Hagar Twp. 
+35020 Hale 
+03100 Hamilton 
+82060 Hamtramck 
+31010 Hancock 
+38100 Hanover-Horton 
+32060 Harbor Beach 
+24020 Harbor Springs 
+13070 Harper Creek 
+82320 Harper Woods 
+18060 Harrison 
+64040 Hart 
+80120 Hartford 
+47060 Hartland 
+33060 Haslett 
+08030 Hastings 
+63130 Hazel Park 
+73210 Hemlock 
+62060 Hesperia 
+82070 Highland Park 
+60020 Hillman 
+30020 Hillsdale 
+70020 Holland 
+63210 Holly 
+33070 Holt 
+61120 Holton 
+13080 Homer 
+03070 Hopkins 
+72020 Houghton Lake 
+31110 Houghton-Portage Twp. 
+47070 Howell 
+46080 Hudson 
+70190 Hudsonville 
+82340 Huron 
+63220 Huron Valley 
+58070 Ida 
+44060 Imlay City 
+82080 Inkster 
+16050 Inland Lakes 
+34010 Ionia 
+34360 Ionia Twp. 
+22010 Iron Mountain 
+27020 Ironwood 
+52180 Ishpeming 
+29060 Ithaca 
+38170 Jackson 
+58080 Jefferson (Monroe) 
+70175 Jenison 
+69030 Johannesburg-Lewiston 
+30030 Jonesville 
+39010 Kalamazoo 
+51045 Kaleva Norman Dickson 
+40040 Kalkaska 
+25110 Kearsley 
+41140 Kelloggsville 
+41145 Kenowa Hills 
+41150 Kent City 
+41160 Kentwood 
+28090 Kingsley 
+79080 Kingston 
+07040 L'Anse 
+50140 L'Anse Creuse 
+78040 Laingsburg 
+57020 Lake City 
+25200 Lake Fenton 
+31130 Lake Linden-Hubbell 
+63230 Lake Orion 
+50120 Lake Shore (Macomb) 
+11030 Lakeshore (Berrien) 
+13090 Lakeview (Calhoun) 
+50130 Lakeview (Macomb) 
+59090 Lakeview (Montcalm) 
+25280 Lake Ville 
+34090 Lakewood 
+63280 Lamphere 
+33020 Lansing 
+44010 Lapeer 
+80130 Lawrence 
+80140 Lawton 
+45020 Leland 
+49040 Les Cheneaux 
+33100 Leslie 
+81070 Lincoln 
+82090 Lincoln Park 
+25250 Linden 
+30040 Litchfield 
+82095 Livonia 
+41170 Lowell 
+53040 Ludington 
+49110 Mackinac Island 
+16070 Mackinaw City 
+46090 Madison (Lenawee) 
+63140 Madison (Oakland) 
+05070 Mancelona 
+81080 Manchester 
+51070 Manistee 
+77010 Manistique 
+83060 Manton 
+23065 Maple Valley 
+13095 Mar Lee 
+14050 Marcellus 
+67050 Marion 
+76140 Marlette 
+52170 Marquette 
+13110 Marshall 
+03060 Martin 
+74100 Marysville 
+33130 Mason (Ingham) 
+58090 Mason (Monroe) 
+53010 Mason County Central 
+53020 Mason County Eastern 
+80150 Mattawan 
+79090 Mayville 
+57030 McBain 
+82045 Melvindale-North Allen Park 
+74120 Memphis 
+75060 Mendon 
+55100 Menominee 
+56050 Meridian 
+73230 Merrill 
+83070 Mesick 
+38120 Michigan Center 
+21135 Mid Peninsula 
+56010 Midland 
+81100 Milan 
+79100 Millington 
+68010 Mio-AuSable 
+61060 Mona Shores 
+58010 Monroe 
+59045 Montabella 
+61180 Montague 
+25260 Montrose 
+49070 Moran Twp. 
+46100 Morenci 
+54040 Morley Stanwood 
+78060 Morrice 
+50160 Mt. Clemens 
+25040 Mt. Morris 
+37010 Mt. Pleasant 
+02070 Munising 
+61010 Muskegon 
+61020 Muskegon Heights 
+38130 Napoleon 
+52090 Negaunee 
+11200 New Buffalo 
+50170 New Haven 
+78070 New Lothrop 
+62070 Newaygo 
+52015 N.l.C.E. (Ishpeming) 
+11300 Niles 
+30050 North Adams-Jerome 
+44090 North Branch 
+55115 North Central 
+22045 North Dickinson 
+32080 North Huron 
+61230 North Muskegon 
+45040 Northport 
+41025 Northview 
+82390 Northville 
+38140 Northwest 
+22025 Norway-Vulcan 
+75100 Nottawa 
+63100 Novi 
+63250 Oak Park 
+61065 Oakridge 
+33170 Okemos 
+23080 Olivet 
+71050 Onaway 
+23490 Oneida Twp. 
+51060 Onekama 
+46110 Onsted 
+66050 Ontonagon 
+61190 Orchard View 
+35010 Oscoda 
+03020 Otsego 
+19120 Ovid-Elsie 
+32090 Owendale-Gagetown 
+78110 Owosso 
+63110 Oxford 
+34040 Palo 
+39130 Parchment 
+80160 Paw Paw 
+76180 Peck 
+24040 Pellston 
+13120 Pennfield 
+64070 Pentwater 
+78080 Perry 
+24070 Petoskey 
+19125 Pewamo-Westphalia 
+17090 Pickford 
+47080 Pinckney 
+09090 Pinconning 
+67055 Pine River 
+30060 Pittsford 
+03010 Plainwell 
+82100 Plymouth-Canton 
+63030 Pontiac 
+74010 Port Huron 
+39140 Portage 
+34110 Portland 
+71060 Posen 
+23090 Potterville 
+52100 Powell Twp. 
+12040 Quincy 
+21060 Rapid River 
+61210 Ravenna 
+30070 Reading 
+82110 Redford Union 
+67060 Reed City 
+79110 Reese 
+61220 Reeths-Puffer 
+52110 Republic-Michigamme 
+50180 Richmond 
+82120 River Rouge 
+11033 River Valley 
+82400 Riverview 
+63260 Rochester 
+41210 Rockford 
+71080 Rogers City 
+50190 Romeo 
+82130 Romulus 
+72010 Roscommon 
+50030 Roseville 
+63040 Royal Oak 
+17110 Rudyard 
+73010 Saginaw City 
+73040 Saginaw Twp. 
+81120 Saline 
+46130 Sand Creek 
+76210 Sandusky 
+34120 Saranac 
+03080 Saugatuck 
+17010 Sault Ste. Marie 
+39160 Schoolcraft 
+64080 Shelby 
+37060 Shepherd 
+32610 Sigel Twp. 3 (Adams) 
+32620 Sigel Twp. 4 (Eccles) 
+32630 Sigel Twp. 6 (Kipper) 
+11830 Sodus Twp. 
+80010 South Haven 
+50200 South Lake 
+63240 South Lyon 
+82140 South Redford 
+63060 Southfield 
+82405 Southgate 
+41240 Sparta 
+70300 Spring Lake 
+38150 Springport 
+73240 St. Charles 
+49010 St. Ignace 
+19140 St. Johns 
+11020 St. Joseph 
+29100 St. Louis 
+06050 Standish-Sterling 
+31140 Stanton Twp. 
+55120 Stephenson 
+33200 Stockbridge 
+75010 Sturgis 
+58100 Summerfield 
+02080 Superior Central 
+45050 Suttons Bay 
+73255 Swan Valley 
+25180 Swartz Creek 
+48040 Tahquamenon 
+35030 Tawas 
+82150 Taylor 
+46140 Tecumseh 
+13130 Tekonsha 
+08050 Thornapple Kellogg 
+75080 Three Rivers 
+28010 Traverse City 
+82155 Trenton 
+59080 Tri County 
+63150 Troy 
+32170 Ubly 
+13135 Union City 
+79145 Unionville-Sebewaing 
+50210 Utica 
+82430 Van Buren 
+50220 Van Dyke 
+69040 Vanderbilt 
+38020 Vandercook Lake 
+79150 Vassar 
+32650 Verona Twp. 
+59150 Vestaburg 
+39170 Vicksburg 
+27070 Wakefield-Marenisco 
+30080 Waldron 
+64090 Walkerville 
+63290 Walled Lake 
+50230 Warren 
+50240 Warren Woods 
+63300 Waterford 
+27080 Watersmeet Twp. 
+11320 Watervliet 
+33215 Waverly 
+03040 Wayland Union 
+82160 Wayne-Westland 
+33220 Webberville 
+52160 Wells Twp. 
+63160 West Bloomfield 
+65045 West Branch-Rose City 
+36025 West Iron County 
+70070 West Ottawa 
+38010 Western 
+82240 Westwood 
+25210 Westwood Heights 
+62090 White Cloud 
+75070 White Pigeon 
+17160 Whitefish Twp. 
+58110 Whiteford 
+61240 Whitehall 
+81140 Whitmore Lake 
+35040 Whittemore-Prescott 
+33230 Williamston 
+81150 Willow Run 
+16100 Wolverine 
+82365 Woodhaven-Brownstown 
+82170 Wyandotte 
+41026 Wyoming 
+74130 Yale 
+81020 Ypsilanti 
+70350 Zeeland 
